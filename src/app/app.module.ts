@@ -10,6 +10,7 @@ import { LoginService } from './login-service.service';
 import { UserService } from './user-service.service';
 import { RegisterService } from './register.service';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RegisterComponent } from './register/register.component';
     AppComponent,
     UserListComponent,
     UserFormComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
 
   ],
   imports: [

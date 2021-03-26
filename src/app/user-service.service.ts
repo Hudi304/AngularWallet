@@ -17,10 +17,12 @@ export class UserService {
 
 
   public findAll(): Observable<User[]> {
+    console.log("find all")
     return this.http.get<User[]>(this.usersUrl);
   }
 
   public save(user: User) {
+    console.log("save")
     return this.http.post<User>(this.usersUrl, user);
   }
 }

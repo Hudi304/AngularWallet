@@ -1,7 +1,7 @@
 export class RegisterRequest {
 
-    nickname!: string;
-    email!: string;
-    password!: string;
+    public nickname!: string;
+    public email!: string;
+    public password!: string;
 
 }
