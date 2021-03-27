@@ -25,4 +25,9 @@ export class UserService {
     console.log("save")
     return this.http.post<User>(this.usersUrl, user);
   }
+
+  public delete(nickname: string) {
+    console.log("removed " + nickname)
+    return this.http.post("http://localhost:8080/admin", nickname)
+  }
 }

@@ -12,6 +12,11 @@ import { RegisterService } from './register.service';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+
 
 
 @NgModule({
@@ -22,13 +27,16 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
     RegisterComponent,
     LoginComponent,
     AdminViewComponent
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [UserService, LoginService, RegisterService],
   bootstrap: [AppComponent]
