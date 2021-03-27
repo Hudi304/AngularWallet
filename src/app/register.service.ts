@@ -18,49 +18,18 @@ export class RegisterService {
     this.registerResponse = new RegisterResponse();
   }
 
-  // public requestRegister(registerReq: RegisterRequest) {
-
-  //   let options = {
-  //     headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
-  //   };
-
-  //   console.log(registerReq.email + ' ' + registerReq.nickname)
-
-  //   return this.http.post<RegisterRequest>(this.userUrl, registerReq)
-  //     .subscribe()
-  // }
 
 
-  public async requestRegister(registerReq: RegisterRequest): Observable<RegisterResponse> {
+  public requestRegister(registerReq: RegisterRequest): Observable<RegisterResponse> {
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       }),
       observe: 'response' as 'response'
     };
-    console.log(registerReq.email + ' ' + registerReq.nickname)
-
-    // return this.http.post<RegisterResponse>(this.userUrl, registerReq)
-    //   .toPromise()
-    //   .then(res => {
-    //     result = res;
-    //     console.log(" Got RegisterRespons " + JSON.stringify(res))
-    //   })
 
     return this.http.post<RegisterResponse>(this.userUrl, registerReq)
-    //console.log(result)
 
-    // if (result.emailAlreadyUsed == false &&
-    //   result.nicknameAlreadyUsed == false &&
-    //   result.nicknameAlreadyUsed == false) {
-    //   console.log("user Registred sucessfully")
-    // }
-    //return result
   }
-
-
-
-
-
 
 }
