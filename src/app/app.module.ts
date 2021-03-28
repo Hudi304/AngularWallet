@@ -16,6 +16,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { AdminService } from './service/admin.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -36,9 +40,12 @@ import { MatIconModule } from '@angular/material/icon';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule,
+    ReactiveFormsModule,
+    MatCardModule
   ],
-  providers: [UserService, LoginService, RegisterService],
+  providers: [UserService, LoginService, RegisterService, AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
